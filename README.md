@@ -1,7 +1,4 @@
-#!/bin/bash
-cat << 'EOF' > README.md
-
-# LibraX — Smart Library Management System
+## LibraX — Smart Library Management System
 
 LibraX is a modern **Library Management System** built using **JavaScript and core Data Structures concepts inspired by C++**.
 
