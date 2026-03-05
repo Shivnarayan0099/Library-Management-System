@@ -111,7 +111,8 @@ LibraX
 Clone the repository
 
 ```bash
-git clone https://github.com/your-username/librax-library-system.git
+##  Live Demo
+https://shivnarayan0099.github.io/Library-Management-System
 ```
 
 Open the project folder and run:
