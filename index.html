@@ -11,7 +11,7 @@
         rel="stylesheet" />
 
     <style>
-        /* ── RESET & ROOT ───────────────────────────────────────── */
+        
         *,
         *::before,
         *::after {
@@ -51,7 +51,7 @@
                 radial-gradient(ellipse 60% 50% at 80% 80%, rgba(167, 139, 250, 0.12) 0%, transparent 60%);
         }
 
-        /* ── HEADER ─────────────────────────────────────────────── */
+        
         header {
             position: sticky;
             top: 0;
@@ -106,14 +106,13 @@
             }
         }
 
-        /* ── LAYOUT ─────────────────────────────────────────────── */
+        
         .wrapper {
             max-width: 1100px;
             margin: 0 auto;
             padding: 32px 24px;
         }
-
-        /* ── STAT CARDS ─────────────────────────────────────────── */
+ 
         .stats-row {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
@@ -152,7 +151,7 @@
             letter-spacing: 0.5px;
         }
 
-        /* ── GLASS CARD ─────────────────────────────────────────── */
+        
         .card {
             background: var(--surface);
             border: 1px solid var(--border);
@@ -194,8 +193,7 @@
             font-size: 1rem;
             background: linear-gradient(135deg, var(--accent), var(--accent2));
         }
-
-        /* ── ACTION BUTTONS ─────────────────────────────────────── */
+ 
         .action-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
@@ -238,8 +236,7 @@
             border-color: transparent;
             box-shadow: 0 12px 30px rgba(108, 99, 255, 0.35);
         }
-
-        /* ── SORT BUTTONS ───────────────────────────────────────── */
+ 
         .sort-row {
             display: flex;
             gap: 10px;
@@ -269,7 +266,7 @@
             border-color: var(--accent);
         }
 
-        /* ── FORM PANEL ─────────────────────────────────────────── */
+      
         #formPanel {
             overflow: hidden;
             max-height: 0;
@@ -365,13 +362,10 @@
             transform: translateY(0);
         }
 
-        /* ── SEARCH RESULT INLINE ───────────────────────────────── */
-        #searchResult {
+          #searchResult {
             margin-top: 16px;
             animation: fadeUp 0.3s ease;
         }
-
-        /* ── TABLE ──────────────────────────────────────────────── */
         #bookTable {
             animation: fadeUp 0.4s ease;
         }
@@ -458,8 +452,7 @@
         tbody tr:hover td {
             background: rgba(108, 99, 255, 0.07);
         }
-
-        /* ── BADGE ──────────────────────────────────────────────── */
+ 
         .badge {
             display: inline-flex;
             align-items: center;
@@ -495,8 +488,7 @@
         .badge.issued .badge-dot {
             background: #f87171;
         }
-
-        /* ── EMPTY STATE ────────────────────────────────────────── */
+ 
         .empty-state {
             text-align: center;
             padding: 60px 20px;
@@ -511,8 +503,7 @@
         .empty-state p {
             font-size: 0.875rem;
         }
-
-        /* ── TOAST ──────────────────────────────────────────────── */
+ 
         #toastContainer {
             position: fixed;
             bottom: 28px;
@@ -579,7 +570,7 @@
             border-left: 3px solid var(--yellow);
         }
 
-        /* ── QUEUE DISPLAY ──────────────────────────────────────── */
+      
         .queue-list {
             display: flex;
             flex-direction: column;
@@ -615,15 +606,12 @@
             text-align: center;
             padding: 20px;
         }
-
-        /* ── DIVIDER ────────────────────────────────────────────── */
+ 
         .divider {
             border: none;
             border-top: 1px solid var(--border);
             margin: 20px 0;
         }
-
-        /* ── RETURN MODAL ───────────────────────────────────────── */
         .overlay {
             position: fixed;
             inset: 0;
@@ -694,8 +682,7 @@
             background: var(--surface2);
             color: var(--text);
         }
-
-        /* ── C++ BADGE ──────────────────────────────────────────── */
+ 
         .cpp-badge {
             display: inline-flex;
             align-items: center;
@@ -709,7 +696,7 @@
             font-weight: 700;
         }
 
-        /* ── FOOTER ─────────────────────────────────────────────── */
+         
         footer {
             text-align: center;
             padding: 32px 16px;
@@ -721,8 +708,7 @@
             color: var(--accent2);
             text-decoration: none;
         }
-
-        /* ── RESPONSIVE ─────────────────────────────────────────── */
+ 
         @media (max-width: 600px) {
             header {
                 padding: 14px 16px;
@@ -741,7 +727,7 @@
 
 <body>
 
-    <!-- ── HEADER ──────────────────────────────────────────────── -->
+     
     <header>
         <div class="logo">Libra<span>X</span></div>
         <div class="header-meta">
@@ -749,11 +735,10 @@
             C++ DSA — Linked List &amp; Queue Engine
         </div>
     </header>
-
-    <!-- ── TOAST CONTAINER ─────────────────────────────────────── -->
+ 
     <div id="toastContainer"></div>
 
-    <!-- ── RETURN MODAL ────────────────────────────────────────── -->
+   
     <div class="overlay" id="returnOverlay">
         <div class="modal">
             <div class="modal-title">📤 Return a Book</div>
@@ -775,7 +760,7 @@
         </div>
     </div>
 
-    <!-- ── MAIN WRAPPER ─────────────────────────────────────────── -->
+  
     <div class="wrapper">
 
         <!-- STATS -->
@@ -797,8 +782,7 @@
                 <div class="stat-label">In Queue</div>
             </div>
         </div>
-
-        <!-- ACTION BUTTONS -->
+ 
         <div class="action-grid">
             <button class="action-btn" id="btnAdd" onclick="openPanel('add')"> <span class="icon">➕</span> Add Book
             </button>
@@ -817,7 +801,7 @@
                 Books </button>
         </div>
 
-        <!-- SORT ROW -->
+       
         <div class="sort-row">
             <span style="color:var(--muted);font-size:0.75rem;font-weight:600;line-height:32px">Sort by:</span>
             <button class="sort-btn" id="sortId" onclick="sortBooks('id')"> 🆔 ID </button>
@@ -825,14 +809,13 @@
             <button class="sort-btn" id="sortAuthor" onclick="sortBooks('author')"> ✍️ Author </button>
         </div>
 
-        <!-- FORM PANEL (collapsible) -->
+       
         <div id="formPanel">
             <div class="form-inner" id="formInner"></div>
         </div>
-
-        <!-- BOOK TABLE + QUEUE -->
+ 
         <div class="card" id="mainCard">
-            <!-- Books table -->
+ 
             <div id="bookTable">
                 <div class="empty-state">
                     <div class="empty-icon">📚</div>
@@ -842,7 +825,7 @@
 
             <hr class="divider" />
 
-            <!-- Issue Queue -->
+            
             <div class="card-title">
                 <div class="card-icon">⏳</div>
                 Issue Queue
@@ -854,56 +837,47 @@
         </div>
 
     </div>
-
-    <!-- FOOTER -->
+ 
     <footer>
     LibraX — Built with <strong>C++ DSA concepts</strong> (Linked List · Queue · Stack) — Assignment Project  
     <br><br>
     👨‍💻 Developed by <strong>Shivnarayan Dwivedi</strong>
 </footer>
 
-    <!-- ════════════════════════════════════════════════════════════
-       INLINE JAVASCRIPT  —  C++ DSA Equivalents
-       ════════════════════════════════════════════════════════════ -->
+     
     <script>
 
-        /* ─────────────────────────────────────────────────────────────
-           BOOK NODE  (C++ equivalent: struct Node { ... Node* next; })
-           ───────────────────────────────────────────────────────────── */
+        
         class Book {
             constructor(id, title, author) {
-                this.id = id;           // node data
+                this.id = id;            
                 this.title = title;
                 this.author = author;
-                this.available = true;         // status flag
-                this.next = null;         // pointer to next node (C++: Node* next)
+                this.available = true;         
+                this.next = null;          
             }
         }
 
-        /* ─────────────────────────────────────────────────────────────
-           LINKED LIST  (C++ equivalent: class LinkedList { Node* head; })
-           Supports: addBook, findBook, deleteBook, getAllBooks, toArray
-           ───────────────────────────────────────────────────────────── */
+       
         class BookLinkedList {
             constructor() {
-                this.head = null;   // C++: Node* head = nullptr;
+                this.head = null;   
                 this.size = 0;
             }
-
-            // INSERT at tail — O(n)
+ 
             addBook(id, title, author) {
                 const newNode = new Book(id, title, author);
                 if (!this.head) {
                     this.head = newNode;
                 } else {
                     let temp = this.head;
-                    while (temp.next) temp = temp.next;   // traverse to tail
-                    temp.next = newNode;                   // link
+                    while (temp.next) temp = temp.next;    
+                    temp.next = newNode;                   
                 }
                 this.size++;
             }
 
-            // SEARCH by id — O(n)
+        
             findBook(id) {
                 let temp = this.head;
                 while (temp) {
@@ -913,11 +887,11 @@
                 return null;
             }
 
-            // DELETE by id — O(n)
+    
             deleteBook(id) {
                 if (!this.head) return false;
                 if (this.head.id === id) {
-                    this.head = this.head.next;   // move head pointer
+                    this.head = this.head.next;   
                     this.size--;
                     return true;
                 }
@@ -925,7 +899,7 @@
                 let curr = this.head.next;
                 while (curr) {
                     if (curr.id === id) {
-                        prev.next = curr.next;      // bypass node (free in C++)
+                        prev.next = curr.next;    
                         this.size--;
                         return true;
                     }
@@ -935,7 +909,7 @@
                 return false;
             }
 
-            // COLLECT all nodes into a JS array
+             
             getAllBooks() {
                 const arr = [];
                 let temp = this.head;
@@ -943,7 +917,7 @@
                 return arr;
             }
 
-            // REBUILD list from sorted array (used by sort)
+          
             rebuildFromArray(arr) {
                 this.head = null;
                 this.size = 0;
@@ -956,29 +930,25 @@
             }
         }
 
-        /* ─────────────────────────────────────────────────────────────
-           QUEUE  (C++ equivalent: queue<Request> q; — FIFO structure)
-           ───────────────────────────────────────────────────────────── */
+       
         class IssueQueue {
             constructor() {
-                this.items = [];   // C++: underlying deque / circular array
+                this.items = [];    
             }
-            enqueue(data) { this.items.push(data); }                   // push_back
-            dequeue() { return this.items.shift(); }               // pop_front
+            enqueue(data) { this.items.push(data); }             
+            dequeue() { return this.items.shift(); } 
             isEmpty() { return this.items.length === 0; }
-            peek() { return this.items[0] || null; }             // front()
+            peek() { return this.items[0] || null; }              
             size() { return this.items.length; }
         }
 
-        /* ─────────────────────────────────────────────────────────────
-           GLOBAL STATE
-           ───────────────────────────────────────────────────────────── */
+        
         const library = new BookLinkedList();
         const issueQueue = new IssueQueue();
         let currentPanel = null;
         let currentSortBy = null;
 
-        // ── Seed a few demo books ───────────────────────────────────
+        
         library.addBook('B001', 'Clean Code', 'Robert C. Martin');
         library.addBook('B002', 'The Pragmatic Programmer', 'David Thomas');
         library.addBook('B003', 'Introduction to Algorithms', 'CLRS');
@@ -986,9 +956,7 @@
         showBooks();
         updateStats();
 
-        /* ─────────────────────────────────────────────────────────────
-           TOAST NOTIFICATION  (replaces alert())
-           ───────────────────────────────────────────────────────────── */
+       
         function toast(message, type = 'info') {
             const icons = { success: '✅', error: '❌', warning: '⚠️', info: 'ℹ️' };
             const el = document.createElement('div');
@@ -1001,9 +969,7 @@
             }, 3200);
         }
 
-        /* ─────────────────────────────────────────────────────────────
-           STATS UPDATE
-           ───────────────────────────────────────────────────────────── */
+        
         function updateStats() {
             const books = library.getAllBooks();
             const avail = books.filter(b => b.available).length;
@@ -1012,24 +978,19 @@
             document.getElementById('statIssued').textContent = books.length - avail;
             document.getElementById('statQueue').textContent = issueQueue.size();
         }
-
-        /* ─────────────────────────────────────────────────────────────
-           OPEN / CLOSE COLLAPSIBLE PANEL
-           ───────────────────────────────────────────────────────────── */
+ 
         function openPanel(type) {
-            // toggle off if same panel clicked again
+            
             if (currentPanel === type) {
                 closePanel();
                 return;
             }
             currentPanel = type;
-
-            // highlight active button
             document.querySelectorAll('.action-btn').forEach(b => b.classList.remove('active'));
             const map = { add: 'btnAdd', search: 'btnSearch', delete: 'btnDelete', issue: 'btnIssue' };
             if (map[type]) document.getElementById(map[type]).classList.add('active');
 
-            // build form HTML
+            
             let html = '';
             if (type === 'add') {
                 html = `
@@ -1069,7 +1030,7 @@
             document.getElementById('formInner').innerHTML = html;
             const panel = document.getElementById('formPanel');
             panel.classList.remove('open');
-            // force reflow for animation restart
+           
             void panel.offsetWidth;
             panel.classList.add('open');
         }
@@ -1079,10 +1040,7 @@
             document.querySelectorAll('.action-btn').forEach(b => b.classList.remove('active'));
             document.getElementById('formPanel').classList.remove('open');
         }
-
-        /* ─────────────────────────────────────────────────────────────
-           ADD BOOK
-           ───────────────────────────────────────────────────────────── */
+ 
         function addBook() {
             const id = document.getElementById('bid').value.trim();
             const title = document.getElementById('btitle').value.trim();
@@ -1102,10 +1060,7 @@
             showBooks();
             updateStats();
         }
-
-        /* ─────────────────────────────────────────────────────────────
-           SEARCH BOOK
-           ───────────────────────────────────────────────────────────── */
+ 
         function searchBook() {
             const id = document.getElementById('sid').value.trim();
             const book = library.findBook(id);
@@ -1124,10 +1079,7 @@
                 res.innerHTML = `<p style="color:var(--red);margin-top:12px;font-size:0.875rem">❌ No book found with ID "${id}".</p>`;
             }
         }
-
-        /* ─────────────────────────────────────────────────────────────
-           UPDATE BOOK
-           ───────────────────────────────────────────────────────────── */
+ 
         function updateBook(id) {
             const book = library.findBook(id);
             if (book) {
@@ -1138,10 +1090,7 @@
                 showBooks();
             }
         }
-
-        /* ─────────────────────────────────────────────────────────────
-           DELETE BOOK
-           ───────────────────────────────────────────────────────────── */
+ 
         function deleteBook() {
             const id = document.getElementById('did').value.trim();
             if (!id) { toast('Enter a Book ID to delete.', 'warning'); return; }
@@ -1155,10 +1104,7 @@
                 toast(`No book found with ID "${id}".`, 'error');
             }
         }
-
-        /* ─────────────────────────────────────────────────────────────
-           SORT  (uses JS Array.sort — mirrors C++ std::sort on vector)
-           ───────────────────────────────────────────────────────────── */
+ 
         function sortBooks(by) {
             currentSortBy = by;
             document.querySelectorAll('.sort-btn').forEach(b => b.classList.remove('sorted'));
@@ -1174,10 +1120,7 @@
             showBooks();
             toast(`Sorted by ${by} ✨`, 'info');
         }
-
-        /* ─────────────────────────────────────────────────────────────
-           SHOW BOOKS TABLE
-           ───────────────────────────────────────────────────────────── */
+ 
         function showBooksPanel() {
             document.getElementById('mainCard').scrollIntoView({ behavior: 'smooth' });
             showBooks();
@@ -1233,10 +1176,7 @@
           </table>
         </div>`;
         }
-
-        /* ─────────────────────────────────────────────────────────────
-           REQUEST ISSUE  →  enqueue  (C++: q.push(request))
-           ───────────────────────────────────────────────────────────── */
+ 
         function requestIssue() {
             const name = document.getElementById('uname').value.trim();
             const regNo = document.getElementById('ureg').value.trim();
@@ -1254,10 +1194,7 @@
             updateStats();
             renderQueue();
         }
-
-        /* ─────────────────────────────────────────────────────────────
-           PROCESS ISSUE  →  dequeue  (C++: q.front(); q.pop();)
-           ───────────────────────────────────────────────────────────── */
+ 
         function processIssue() {
             if (issueQueue.isEmpty()) {
                 toast('Issue queue is empty.', 'warning');
@@ -1275,10 +1212,7 @@
                 toast(`Book "${id}" no longer exists.`, 'error');
             }
         }
-
-        /* ─────────────────────────────────────────────────────────────
-           RETURN BOOK  (modal confirmation)
-           ───────────────────────────────────────────────────────────── */
+ 
         function confirmReturn() {
             const reg = document.getElementById('retReg').value.trim();
             const id = document.getElementById('retBid').value.trim();
@@ -1295,10 +1229,7 @@
             showBooks();
             updateStats();
         }
-
-        /* ─────────────────────────────────────────────────────────────
-           RENDER QUEUE LIST (visual representation of C++ Queue)
-           ───────────────────────────────────────────────────────────── */
+ 
         function renderQueue() {
             const el = document.getElementById('queueDisplay');
             if (issueQueue.isEmpty()) {
@@ -1322,8 +1253,6 @@
             html += '</div>';
             el.innerHTML = html;
         }
-
-        // initial render
         renderQueue();
 
     </script>
